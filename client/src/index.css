@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-night text-chalk font-body antialiased;
+  background-image:
+    linear-gradient(rgba(255, 201, 77, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 201, 77, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+::selection {
+  background: #ffc94d;
+  color: #0b1f1a;
+}
+
+/* Visible keyboard focus ring everywhere, respecting the theme */
+:focus-visible {
+  outline: 2px solid #ffc94d;
+  outline-offset: 2px;
+}
+
+.scoreboard-panel {
+  @apply bg-turf border border-turfLight rounded-sm;
+}
+
+.led-number {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
