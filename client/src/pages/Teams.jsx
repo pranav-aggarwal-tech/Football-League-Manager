@@ -37,7 +37,7 @@ export default function Teams() {
       const payload = { ...form };
       if (!payload.foundedYear) delete payload.foundedYear;
       if (!payload.shortName) delete payload.shortName;
-      await api.post("https://football-league-manager-k1rq.onrender.com/teams", payload);
+      await api.post("/teams", payload);
       setForm(emptyForm);
       setShowForm(false);
       fetchTeams();
