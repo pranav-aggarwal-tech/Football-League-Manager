@@ -13,7 +13,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/api/health", (req, res) => {
+app.get("/api", (req, res) => {
   res.json({ status: "ok", message: "Football League Manager API is running" });
 });
 
