@@ -37,7 +37,7 @@ export default function TeamDetail() {
       const payload = { ...form, team: id };
       if (!payload.jerseyNumber) delete payload.jerseyNumber;
       if (!payload.age) delete payload.age;
-      await api.post("/players", payload);
+      await api.post("https://football-league-manager-k1rq.onrender.com/api/players", payload);
       setForm(emptyPlayer);
       setShowForm(false);
       fetchTeam();

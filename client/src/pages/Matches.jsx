@@ -40,7 +40,7 @@ export default function Matches() {
     e.preventDefault();
     setError("");
     try {
-      await api.post("/matches", form);
+      await api.post("https://football-league-manager-k1rq.onrender.com/api/matches", form);
       setForm(emptyMatch);
       setShowForm(false);
       fetchMatches();
