@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.json({ status: "ok", message: "Football League Manager API is running" });
+  res.send({ status: "ok", message: "Football League Manager API is running" });
 });
 
 app.use("/api/teams", teamRoutes);
